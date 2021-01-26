@@ -26,7 +26,7 @@ class Login extends Component{
                                     </svg>
                                 </div>
                             </div>
-                                <input id="name" name="name" type="text" placeholder="E-mail" value="" class="text-sm sm:text-base relative w-full border rounded placeholder-gray-400 focus:border-indigo-400 focus:outline-none py-2 pr-2 pl-12"/>
+                                <input id="name" name="name" type="text" placeholder="E-mail" class="text-sm sm:text-base relative w-full border rounded placeholder-gray-400 focus:border-indigo-400 focus:outline-none py-2 pr-2 pl-12"/>
                         </div>
                         <div class="relative">
                             <div class="absolute flex border border-transparent left-0 top-0 h-full w-10">
@@ -36,7 +36,7 @@ class Login extends Component{
                                     </svg>
                                 </div>
                             </div>
-                                <input id="name" name="name" type="text" placeholder="Password" value="" class="text-sm sm:text-base relative w-full border rounded placeholder-gray-400 focus:border-indigo-400 focus:outline-none py-2 pr-2 pl-12"/>
+                                <input id="name" name="name" type="password" placeholder="Password" class="text-sm sm:text-base relative w-full border rounded placeholder-gray-400 focus:border-indigo-400 focus:outline-none py-2 pr-2 pl-12"/>
                         </div>
                         <hr class="w-full"></hr>
                         <button class="rounded-lg bg-blue-600 h-10 w-full text-white">

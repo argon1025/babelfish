@@ -3,17 +3,6 @@ import React, { Component } from 'react';
 class Header extends Component{
     render() {
         return (
-            /* 
-            flex-wrap 컨텐츠사이즈가 오버되면 줄바꿈됩니다
-            flex-row 컨텐츠를 순서대로 정렬합니다
-            w-full 콘텐츠를 꽉 채웁니다
-            space-x-1 콘텐츠 사이 마진과 같은 공간을 줍니다
-            m-8 마진을 설정합니다
-            fill-current 텍스트와 같이 svg의 색상을 변경합니다
-            text-2xl 텍스트 사이즈를 변경합니다
-
-
-            */
           <div class="grid grid-cols-4 m-5 w-auto">
             <div class="col-span-4 flex justify-center p-5 md:col-span-1 md:justify-start">
                 <div class="flex flex-row">

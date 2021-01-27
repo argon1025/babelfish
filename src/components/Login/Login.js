@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import back from '../../Login_back2.jpg';
+import back from '../../res/Login_back2.jpg';
 class Login extends Component{
     state = {
         email : "",

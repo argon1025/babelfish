@@ -17,7 +17,7 @@ class Login extends Component{
     // 로그인버튼 클릭
     pressedLoginButton = (event) => {
         //console.log(this.state);
-        this.props.sendData(this.state); // 상태값을 content.sendData 를통해 전달
+        this.props.logindataManipulation(this.state); // 상태값을 content.sendData 를통해 전달
 
         //전달후 입력값 초기화
         this.setState({

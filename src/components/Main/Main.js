@@ -43,7 +43,10 @@ class Main extends Component{
           content = <WordsList
           changeViewId={this.props.changeViewId}
           WordsData = {this.props.WordsData}
+          NotesData={this.props.NotesData}
           changeFocusWordId = {this.props.changeFocusWordId}
+          userWordsDelete={this.props.userWordsDelete} //유저 단어 삭제
+          focusNoteId={this.props.focusNoteId}
           />;
           break;
           case 8:

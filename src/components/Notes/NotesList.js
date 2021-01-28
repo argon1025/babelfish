@@ -36,7 +36,7 @@ class NoteList extends Component{
               {notelist}
             </div>
 
-              <div onClick={this.pressCreateNoteButton} class="flex flex-col pt-5 mt-8 w-80 h-32 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg shadow-2xl p-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+              <div onClick={this.pressCreateNoteButton} class="flex flex-col pt-5 mt-8 h-32 xl:w-80 w-full bg-gradient-to-r from-green-400 to-blue-500 rounded-lg shadow-2xl p-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer">
                 <h1 class="subpixel-antialiased text-xl font-semibold text-white text-center">새로운 단어장 생성</h1>
                 <div class="flex justify-center"><svg class="w-14 h-14 fill-current text-white text-center" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg></div>
                 

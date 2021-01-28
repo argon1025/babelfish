@@ -22,8 +22,10 @@ class Content extends Component {
         //console.log(data);
         try {
             this.setState({api_fetching:true});// 질의 진행 상태설정
-
+            console.log(data.email);
+            console.log(data.password);
             const post = await service.getToken(data.email,data.password); //질의
+            console.log()
             sessionStorage.setItem("token", post.data.token); // 토큰정보 세션에 저장
 
             //console.log(sessionStorage.getItem("token")); // 토큰정보 출력
@@ -300,18 +302,19 @@ class Content extends Component {
       await this.setState({focusNoteId : value});
       this.userWordsDataLoad();
     }
-    changeFocusWordId = (value) => {
-      return this.setState({focusWordId : value});
+    changeFocusWordId = async(value) => {
+      return await this.setState({focusWordId : value});
     }
     render() {
         return (
             <div>
-            {this.state.viewid === 0 && (<Login sendData={this.logindataManipulation} />)/*로그인 필요시*/}
+            {this.state.viewid === 0 && (<Login logindataManipulation={this.logindataManipulation} />)/*로그인 필요시*/}
 
             {this.state.viewid >= 1 && (<Main 
             getNote={this.userNoteDataLoad}  // 노트 리스트 동기화
             NotesData={this.state.notes}  // 노트 리스트 데이터
             WordsData={this.state.words} //단어 리스트 데이터
+            focusNoteId={this.state.focusNoteId} // 현재 위치 노트 아이디
             api_fetching={this.state.api_fetching} // api 질의 진행 상태
             changeViewId={this.changeViewId} // 뷰 상태 데이터 변경
             viewId={this.state.viewid} // 뷰 상태 데이터

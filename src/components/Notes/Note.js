@@ -2,19 +2,17 @@ import React, { Component } from 'react';
 
   class Note extends Component{
       pressDeleteButton = (event) => {
-        console.log(event.currentTarget.id);
+        //console.log(event.currentTarget.id);
+        event.stopPropagation(); //이벤트 버블링 방지
         this.props.userNoteDelete(event.currentTarget.id);
       }
       pressNotebutton = (event) => {
-        console.log("----------------------------");
-        console.log(event.currentTarget.id);
         this.props.changeFocusNoteId(event.currentTarget.id);
         this.props.changeViewId(7);
-        console.log("----------------------------");
       }
       render() {
           return (
-                <div onClick={this.pressNotebutton} key={this.props.key} id={this.props.id} class="flex flex-row w-80 h-15 bg-white rounded-lg shadow-sm p-4 mr-4 mt-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+                <div onClick={this.pressNotebutton} key={this.props.key} id={this.props.id} class="flex flex-row xl:w-80 w-full h-15 bg-white rounded-lg shadow-sm p-4 mt-4 mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer">
                     <div>
                     <h1 class="subpixel-antialiased text-lg font-semibold text-gray-600">{this.props.name}</h1>
                     </div>

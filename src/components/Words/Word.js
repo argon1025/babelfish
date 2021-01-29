@@ -11,7 +11,7 @@ class Word extends Component {
     render() {
         return (
             <div class="flex flex-col xl:flex-row w-full h-15 p-4 items-center bg-white rounded-lg shadow-sm xl:space-y-0 space-y-1">
-                <div class="flex-1 truncate">
+                <div class="flex-1">
                     <h1 class="subpixel-antialiased text-2xl font-semibold text-gray-600">{this.props.wordTitle}</h1>
                 </div>
                 <div class="flex-1">

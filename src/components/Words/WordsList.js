@@ -16,6 +16,9 @@ class WordsList extends Component {
 
         }
     }
+    pressWordTestButton = () => {
+        this.props.changeViewId(10);
+    }
     componentDidMount() {
         console.log("단어 리스트")
         //this.props.getNote();
@@ -58,7 +61,7 @@ class WordsList extends Component {
                             </div>
                         </div>
                         <div>
-                            <div class="flex flex-row w-full xl:w-40 h-15 px-3 p-2 bg-white rounded-lg shadow-sm items-center space-x-1 text-gray-600 transition duration-500 ease-in-out hover:bg-blue-400 transform hover:-translate-y-1 hover:text-white cursor-pointer">
+                            <div onClick={this.pressWordTestButton} class="flex flex-row w-full xl:w-40 h-15 px-3 p-2 bg-white rounded-lg shadow-sm items-center space-x-1 text-gray-600 transition duration-500 ease-in-out hover:bg-blue-400 transform hover:-translate-y-1 hover:text-white cursor-pointer">
                                 <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" /><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
                                 <h2 class="subpixel-antialiased text-sm">단어 시험</h2>
                             </div>

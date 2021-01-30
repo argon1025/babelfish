@@ -28,7 +28,7 @@ class Word extends Component {
                     <h2 class="subpixel-antialiased text-base text-gray-600">{this.props.MeanHide ? '숨김' : this.props.mean2}</h2>
                 </div>
                 <div class="flex-1">
-                    <h2 class="subpixel-antialiased text-base text-gray-600">{this.props.wrongCount2}</h2>
+                    <h2 class="subpixel-antialiased text-base text-gray-600">{this.props.wrongCount}</h2>
                 </div>
                 <div class="flex flex-row flex-2">
                     <svg onClick={this.pressWordModifyButton} id={this.props.id} class="w-6 h-6 fill-current text-gray-300 hover:text-blue-500 duration-300 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" /><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" /></svg>

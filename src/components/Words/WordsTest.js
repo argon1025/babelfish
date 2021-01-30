@@ -15,6 +15,7 @@ class WordsTest extends Component {
         super(props);
         const questionsList = exam.createQuestions(this.props.WordsData);
         this.state = {loading:false,page:0,questionsCount:questionsList.questions-1,wrongCount:0,viewid:0,questionsData: questionsList};
+        console.log(questionsList);
     }
     pressAnswerButton = (event) => {
         if(this.state.questionsData.data[this.state.page].correctAnswer == event.target.id){ //정답인지 체크
@@ -23,9 +24,13 @@ class WordsTest extends Component {
             this.setState({questionsData : news});
         }else{
             this.setState({wrongCount : this.state.wrongCount+1});
+            this.props.userWordsWrongCountUpdate(this.state.questionsData.data[this.state.page].wordId); //오답 카운트 증가
         }
         if(this.state.questionsCount === this.state.page){ //시험이 종료된경우
             this.setState({viewid:1}); //결과 페이지로
+            if(this.state.wrongCount === 0){//만점일 경우
+                this.props.userNoteLearningDayUpdate();
+            }
         }else{
             this.setState({page:this.state.page+1}); // 다음 시험 페이지로
         }

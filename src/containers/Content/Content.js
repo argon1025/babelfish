@@ -368,7 +368,80 @@ class Content extends Component {
             console.log(error.config);
       }
     }
-
+    userNoteLearningDayUpdate = async() => { //updatedNote(usertoken, userid, noteid) {
+           //TODO
+      //1.상태 설정 - 질의 진행중
+      //2.API 통신 진행
+      //3. 노트 리스트 동기화
+      //4.상태 설정 - 질의 종료
+      try {
+        //1.상태 설정 - 질의 진행중
+        this.setState({api_fetching:true});
+        //2.API 통신 진행
+        await service.updatedNote(sessionStorage.getItem("token"),this.state.userid,this.state.focusNoteId);
+        //3. 노트 리스트 동기화
+        await this.userNoteDataLoad();
+        //4.상태 설정 - 질의 종료
+        this.setState({api_fetching : false, error:false, error_msg:""});// 질의 성공 상태설정
+      }catch(error){
+        if (error.response) {
+            // 요청이 이루어졌으며 서버가 2xx의 범위를 벗어나는 상태 코드로 응답했습니다.
+            //console.log(error.response.data); // 서버응답
+            //console.log(error.response.status); //400
+            //console.log(error.response.headers);
+            this.setState({api_fetching : false, error:true, error_msg:error.response.data.msg_code});// 질의 진행 상태설정
+          }
+          else if (error.request) {
+            // 요청이 이루어 졌으나 응답을 받지 못했습니다.
+            // `error.request`는 브라우저의 XMLHttpRequest 인스턴스 또는
+            // Node.js의 http.ClientRequest 인스턴스입니다.
+            //console.log(error.request);
+            this.setState({api_fetching : false, error:true, error_msg:"api_server_offline"});// 질의 진행 상태설정
+          }
+          else {
+            // 오류를 발생시킨 요청을 설정하는 중에 문제가 발생했습니다.
+            console.log('Error', error.message);
+            this.setState({api_fetching : false, error:true, error_msg:"front_server_error"});// 질의 진행 상태설정
+          }
+          console.log(error.config);
+    }
+    }
+    userWordsWrongCountUpdate = async(wordid) => { //wrongCountWord(usertoken, userid, noteid, wordid)
+           //TODO
+      //1.상태 설정 - 질의 진행중
+      //2.API 통신 진행
+      //3. 노트 리스트 동기화
+      //4.상태 설정 - 질의 종료
+      try {
+        //1.상태 설정 - 질의 진행중
+        this.setState({api_fetching:true});
+        //2.API 통신 진행
+        await service.wrongCountWord(sessionStorage.getItem("token"),this.state.userid,this.state.focusNoteId,wordid);
+        //4.상태 설정 - 질의 종료
+        this.setState({api_fetching : false, error:false, error_msg:""});// 질의 성공 상태설정
+      }catch(error){
+        if (error.response) {
+            // 요청이 이루어졌으며 서버가 2xx의 범위를 벗어나는 상태 코드로 응답했습니다.
+            //console.log(error.response.data); // 서버응답
+            //console.log(error.response.status); //400
+            //console.log(error.response.headers);
+            this.setState({api_fetching : false, error:true, error_msg:error.response.data.msg_code});// 질의 진행 상태설정
+          }
+          else if (error.request) {
+            // 요청이 이루어 졌으나 응답을 받지 못했습니다.
+            // `error.request`는 브라우저의 XMLHttpRequest 인스턴스 또는
+            // Node.js의 http.ClientRequest 인스턴스입니다.
+            //console.log(error.request);
+            this.setState({api_fetching : false, error:true, error_msg:"api_server_offline"});// 질의 진행 상태설정
+          }
+          else {
+            // 오류를 발생시킨 요청을 설정하는 중에 문제가 발생했습니다.
+            console.log('Error', error.message);
+            this.setState({api_fetching : false, error:true, error_msg:"front_server_error"});// 질의 진행 상태설정
+          }
+          console.log(error.config);
+    }
+    }
     //상태변경
     // 모든 컴포넌트 뷰아이디 상태변경 처리
     changeViewId = (value) => {
@@ -404,6 +477,8 @@ class Content extends Component {
             userWordsDelete={this.userWordsDelete} //유저 단어 삭제
             userWordsCreate={this.userWordsCreate} //유저 단어 생성
             userWordsModify={this.userWordsModify}//유저 단어 수정
+            userNoteLearningDayUpdate={this.userNoteLearningDayUpdate}
+            userWordsWrongCountUpdate={this.userWordsWrongCountUpdate}
             />)}
             </div>
         );

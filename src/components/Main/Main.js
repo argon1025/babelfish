@@ -80,6 +80,8 @@ class Main extends Component {
         content = <WordsTest
           WordsData={this.props.WordsData}
           changeViewId={this.props.changeViewId}
+          userNoteLearningDayUpdate={this.props.userNoteLearningDayUpdate}
+          userWordsWrongCountUpdate={this.props.userWordsWrongCountUpdate}
         />;
         break;
     }

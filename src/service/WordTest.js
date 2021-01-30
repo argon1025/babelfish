@@ -30,7 +30,7 @@ export function createQuestions(wordListdata) {
                 let answer = random(wordListLength, testList.loadingcount, 4);
                 //console.log(wordListdata[answer[0]].Mean1);
                 //문제 포장
-                return { id: testList.loadingcount, title: data.Word_Title, correctAnswer:data.Mean1, right:false, one: wordListdata[answer[0]].Mean1, two: wordListdata[answer[1]].Mean1, three: wordListdata[answer[2]].Mean1, four: wordListdata[answer[3]].Mean1 };
+                return { id: testList.loadingcount,wordId:data.id, title: data.Word_Title, correctAnswer:data.Mean1, right:false, one: wordListdata[answer[0]].Mean1, two: wordListdata[answer[1]].Mean1, three: wordListdata[answer[2]].Mean1, four: wordListdata[answer[3]].Mean1 };
             }
         );
 

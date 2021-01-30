@@ -73,7 +73,7 @@ export function updatedNote(usertoken, userid, noteid) {
   console.log(`api 노트 학습일자 갱신`)
   //console.log(`(${id}, ${password} ${settings.api_url})`)
   return axios.put(
-    `${settings.api_url}api/users/${userid}/notes/${noteid}/updated-date`,
+    `${settings.api_url}api/users/${userid}/notes/${noteid}/updated-date`,{},
     {
       headers: {
         token: usertoken
@@ -141,9 +141,11 @@ export function deleteWord(usertoken, userid, noteid, wordid) {
 }
 export function wrongCountWord(usertoken, userid, noteid, wordid) {
   console.log(`api 단어 틀림 카운트 증가`)
+
+  console.log(usertoken);
   //console.log(`(${id}, ${password} ${settings.api_url})`)
   return axios.put(
-    `${settings.api_url}api/users/${userid}/notes/${noteid}/words/${wordid}`,
+    `${settings.api_url}api/users/${userid}/notes/${noteid}/words/${wordid}/wrong-count`,{},
     {
       headers: {
         token: usertoken

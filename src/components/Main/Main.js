@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import {NoteList} from '../';
-import {NoteCreate} from '../';
-import {WordsList} from '../';
-import {WordsCreate} from '../';
-import {WordsTest} from '../';
-import {Loading} from '../';
+import { NoteList } from '../';
+import { NoteCreate } from '../';
+import { WordsList } from '../';
+import { WordsCreate } from '../';
+import { WordsTest } from '../';
+import { Loading } from '../';
+import { WordsModify } from '../';
+import { NotesModify } from '../';
 
 import './Header.css';
 
-class Main extends Component{
+class Main extends Component {
   componentDidMount() {
     console.log("메인 뷰")
     this.props.getNote(); //노트 데이터 받아옴
@@ -16,61 +18,72 @@ class Main extends Component{
   pressMenuButton = (event) => {
     this.props.changeViewId(event.currentTarget.id);
   }
-    render() {
-      let content;
-      switch(this.props.viewId){
-        case 1:
-          content = <Loading/>;
-          break;
-        case 2:
-            content = <NoteList 
-            NotesData={this.props.NotesData}
-            changeViewId={this.props.changeViewId}
-            userNoteDelete={this.props.userNoteDelete}
-            getNote={this.props.getNote}
-            changeFocusNoteId={this.props.changeFocusNoteId}
-            userWordsDataLoad={this.props.userWordsDataLoad}
-            />;
-          break;
-        case 3:
-          content = <p>3</p>;
-          break;
-        case 4:
-          content = <p>4</p>;
-          break;
-        case 5:
-          content = <NoteCreate userNoteCreate={this.props.userNoteCreate} />;
-          break;
-        case 6:
-          content = <p>노트 수정</p>;
-          break;
-        case 7:
-          content = <WordsList
-          changeViewId={this.props.changeViewId}
-          WordsData = {this.props.WordsData}
+  render() {
+    let content;
+    switch (this.props.viewId) {
+      case 1:
+        content = <Loading />;
+        break;
+      case 2:
+        content = <NoteList
           NotesData={this.props.NotesData}
-          changeFocusWordId = {this.props.changeFocusWordId}
+          changeViewId={this.props.changeViewId}
+          userNoteDelete={this.props.userNoteDelete}
+          getNote={this.props.getNote}
+          changeFocusNoteId={this.props.changeFocusNoteId}
+          userWordsDataLoad={this.props.userWordsDataLoad}
+        />;
+        break;
+      case 3:
+        content = <p>3</p>;
+        break;
+      case 4:
+        content = <p>4</p>;
+        break;
+      case 5:
+        content = <NoteCreate userNoteCreate={this.props.userNoteCreate} />;
+        break;
+      case 6:
+        content = <NotesModify
+          focusNoteId={this.props.focusNoteId}
+          NotesData={this.props.NotesData}
+          userNoteModify={this.props.userNoteModify}
+          changeViewId={this.props.changeViewId}
+        />;
+        break;
+      case 7:
+        content = <WordsList
+          changeViewId={this.props.changeViewId}
+          WordsData={this.props.WordsData}
+          NotesData={this.props.NotesData}
+          changeFocusWordId={this.props.changeFocusWordId}
           userWordsDelete={this.props.userWordsDelete} //유저 단어 삭제
           focusNoteId={this.props.focusNoteId}
-          />;
-          break;
-          case 8:
-            content = <WordsCreate
-            userWordsCreate={this.props.userWordsCreate}
-            changeViewId={this.props.changeViewId}
-            />;
-            break;
-            case 9:
-              content = <p>단어 수정</p>;
-              break;
-            case 10:
-              content = <WordsTest
-              WordsData = {this.props.WordsData}
-              changeViewId={this.props.changeViewId}
-              />;
-              break;
-      }
-        return (
+          userWordsDataLoad={this.props.userWordsDataLoad}
+        />;
+        break;
+      case 8:
+        content = <WordsCreate
+          userWordsCreate={this.props.userWordsCreate}
+          changeViewId={this.props.changeViewId}
+        />;
+        break;
+      case 9:
+        content = <WordsModify
+        WordsData={this.props.WordsData}
+        focusWordId={this.props.focusWordId} 
+        userWordsModify={this.props.userWordsModify}//유저 단어 수정
+        changeViewId={this.props.changeViewId}
+         />;
+        break;
+      case 10:
+        content = <WordsTest
+          WordsData={this.props.WordsData}
+          changeViewId={this.props.changeViewId}
+        />;
+        break;
+    }
+    return (
       <div class="w-full h-full">
         {/* 네비게이션 */}
         <div class="xl:flex w-full h-full">
@@ -115,6 +128,5 @@ class Main extends Component{
     );
   }
 }
-  
-  export default Main;
-  
+
+export default Main;

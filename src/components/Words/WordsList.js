@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { Word } from '../';
 
 class WordsList extends Component {
+    constructor(props){
+        super(props);
+        console.log("단어 리스트")
+        this.props.userWordsDataLoad();
+    }
     state = {
         MeanHide: false
     }
@@ -20,7 +25,7 @@ class WordsList extends Component {
         this.props.changeViewId(10);
     }
     componentDidMount() {
-        console.log("단어 리스트")
+        //console.log("단어 리스트")
         //this.props.getNote();
     }
     render() { //NotesData={this.props.NotesData}
@@ -41,6 +46,7 @@ class WordsList extends Component {
                     MeanHide={this.state.MeanHide}
                     userWordsDelete={this.props.userWordsDelete}
                     changeFocusWordId={this.props.changeFocusWordId}
+                    changeViewId={this.props.changeViewId}
                 />
             })
         } else {

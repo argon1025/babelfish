@@ -7,6 +7,7 @@ import { WordsTest } from '../';
 import { Loading } from '../';
 import { WordsModify } from '../';
 import { NotesModify } from '../';
+import { Dashboard } from '../';
 
 import './Header.css';
 
@@ -22,7 +23,7 @@ class Main extends Component {
     let content;
     switch (this.props.viewId) {
       case 1:
-        content = <Loading />;
+        content = <Dashboard />;
         break;
       case 2:
         content = <NoteList
@@ -35,10 +36,10 @@ class Main extends Component {
         />;
         break;
       case 3:
-        content = <p>3</p>;
+        content = <Loading />;
         break;
       case 4:
-        content = <p>4</p>;
+        content = <Loading />;
         break;
       case 5:
         content = <NoteCreate userNoteCreate={this.props.userNoteCreate} />;
@@ -82,6 +83,9 @@ class Main extends Component {
           changeViewId={this.props.changeViewId}
           userNoteLearningDayUpdate={this.props.userNoteLearningDayUpdate}
           userWordsWrongCountUpdate={this.props.userWordsWrongCountUpdate}
+          api_fetching={this.props.api_fetching}
+          focusNoteId={this.props.focusNoteId}
+          NotesData={this.props.NotesData}
         />;
         break;
     }

@@ -41,10 +41,13 @@ class WordsTest extends Component {
             this.state = { page: 0, questionsCount: 0, wrongCount: 0, viewid: 4, };
         }
     }
-    loadingCompoment(callback) {
+    loadingCompoment(ThisViewId, callback) {
         setTimeout(() => {
-            if (this.props.api_fetching === false) {
-                this.setState({ viewid: 1 });
+            if (this.props.api_fetching === false) { // API 질의가 진행중이 아닐경우
+                //console.log(`${this.props.viewId} ${ThisViewId}`)
+                if (this.props.viewId === ThisViewId) { // 사용자가 뷰를 이동하지 않고 유지 했을 경우
+                    this.setState({ viewid: 1 }); // 내부 뷰 상태를 설정합니다 1: 시험시작전 안내
+                }
             } else {
                 callback();
             }
@@ -54,7 +57,7 @@ class WordsTest extends Component {
         // 지정된 시간 이후에 content state.api 가 계속 질의 중인지 확인합니다
         // 작업을 다 끝낸 상태면 화면으로 리 랜더링 하게됩니다 작업중일경우 callback으로 다시 로딩함수를 호출합니다
         if (this.state.viewid !== 4) { // 오류로 진행이 불가능하지 않을 경우
-            this.loadingCompoment(this.loadingCompoment);
+            this.loadingCompoment(10,this.loadingCompoment);
         }
     }
     pressNextButton = () => {

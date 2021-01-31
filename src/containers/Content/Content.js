@@ -68,7 +68,6 @@ class Content extends Component {
             //3.상태 설정 - 질의 종료 및 데이터 동기화
             this.setState({api_fetching : false, error:false, error_msg:"", notes:get.data.data});
             //console.log(get.data.data); //단어장 리스트
-
         }catch(error){
             // 토큰정보가 유효하지 않을경우 로그인창으로
             if (error.response) {
@@ -460,7 +459,7 @@ class Content extends Component {
             {this.state.viewid === 0 && (<Login logindataManipulation={this.logindataManipulation} />)/*로그인 필요시*/}
 
             {this.state.viewid >= 1 && (<Main 
-            getNote={this.userNoteDataLoad}  // 노트 리스트 동기화
+            userNoteDataLoad={this.userNoteDataLoad}  // 노트 리스트 동기화
             NotesData={this.state.notes}  // 노트 리스트 데이터
             WordsData={this.state.words} //단어 리스트 데이터
             focusNoteId={this.state.focusNoteId} // 현재 위치 노트 아이디

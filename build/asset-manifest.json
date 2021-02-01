@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/babelfish/static/css/main.3a3db1ce.chunk.css",
+    "main.js": "/babelfish/static/js/main.93ebd334.chunk.js",
+    "main.js.map": "/babelfish/static/js/main.93ebd334.chunk.js.map",
+    "runtime-main.js": "/babelfish/static/js/runtime-main.72b6bed2.js",
+    "runtime-main.js.map": "/babelfish/static/js/runtime-main.72b6bed2.js.map",
+    "static/js/2.569176a2.chunk.js": "/babelfish/static/js/2.569176a2.chunk.js",
+    "static/js/2.569176a2.chunk.js.map": "/babelfish/static/js/2.569176a2.chunk.js.map",
+    "index.html": "/babelfish/index.html",
+    "static/css/main.3a3db1ce.chunk.css.map": "/babelfish/static/css/main.3a3db1ce.chunk.css.map",
+    "static/js/2.569176a2.chunk.js.LICENSE.txt": "/babelfish/static/js/2.569176a2.chunk.js.LICENSE.txt",
+    "static/media/Login_back2.b4175f47.jpg": "/babelfish/static/media/Login_back2.b4175f47.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.72b6bed2.js",
+    "static/js/2.569176a2.chunk.js",
+    "static/css/main.3a3db1ce.chunk.css",
+    "static/js/main.93ebd334.chunk.js"
+  ]
+}

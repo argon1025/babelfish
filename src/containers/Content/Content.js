@@ -454,7 +454,11 @@ class Content extends Component {
     this.setState({ focusWordId: value });
   }
   modalHide = () => {
-    this.setState({ error: false, error_msg: "" })
+    if(this.state.error_msg === '4'){
+      this.setState({ error: false, error_msg: "", viewid:0 });
+    }else{
+      this.setState({ error: false, error_msg: "" });
+    }
   }
   modalText = () => {
     switch (this.state.error_msg) {
@@ -463,7 +467,6 @@ class Content extends Component {
       case 't2':
         return '아이디 또는 패스워드가 올바르지 않습니다';
       case '4':
-        this.setState({ viewid: 0 })
         return '로그아웃 되었습니다 다시 로그인해 주세요';
       case 'n2-1':
         return '노트 이름에 허용되지 않는 문자가 있거나 노트 이름이 너무 깁니다';

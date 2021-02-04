@@ -3,7 +3,6 @@ import Login from './Login/Login';
 import Loading from './Main/Loading';
 
 import Dashboard from './Dashboard/Dashboard';
-import RecommendWidget from './Dashboard/RecommendWidget';
 
 import NoteList from './Notes/NotesList'; // 단어장 리스트
 import Note from './Notes/Note'; //노트 박스
@@ -29,6 +28,5 @@ export {
     WordsCreate,
     WordsTest,
     WordsModify,
-    Dashboard,
-    RecommendWidget
+    Dashboard
 };

@@ -1,1 +1,1 @@
-export const api_url = "http://39.116.98.133:8484/";
+export const api_url = "http://ec2-15-164-214-135.ap-northeast-2.compute.amazonaws.com/";

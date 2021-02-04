@@ -23,12 +23,12 @@ class Main extends Component {
     let content;
     switch (this.props.viewId) {
       case 1:
-        content = <Dashboard 
-        api_fetching={this.props.api_fetching}
-        viewId={this.props.viewId}
-        NotesData={this.props.NotesData}
-        changeViewId={this.props.changeViewId}
-        userNoteDataLoad={this.props.userNoteDataLoad}
+        content = <Dashboard
+          api_fetching={this.props.api_fetching}
+          viewId={this.props.viewId}
+          NotesData={this.props.NotesData}
+          changeViewId={this.props.changeViewId}
+          userNoteDataLoad={this.props.userNoteDataLoad}
         />;
         break;
       case 2:
@@ -77,11 +77,11 @@ class Main extends Component {
         break;
       case 9:
         content = <WordsModify
-        WordsData={this.props.WordsData}
-        focusWordId={this.props.focusWordId} 
-        userWordsModify={this.props.userWordsModify}//유저 단어 수정
-        changeViewId={this.props.changeViewId}
-         />;
+          WordsData={this.props.WordsData}
+          focusWordId={this.props.focusWordId}
+          userWordsModify={this.props.userWordsModify}//유저 단어 수정
+          changeViewId={this.props.changeViewId}
+        />;
         break;
       case 10:
         content = <WordsTest
@@ -97,15 +97,15 @@ class Main extends Component {
         break;
     }
     return (
-      <div class="w-full h-full">
+      <div>
         {/* 네비게이션 */}
-        <div class="xl:flex w-full h-full">
-          <div class="flex pt-8 space-y-10 h-48 w-screen flex-col xl:h-full xl:w-24 bg-white rounded-lg">
-            <div class="flex justify-center w-full">
+        <div class="xl:flex w-full h-full min-h-screen">
+          <div class="flex pt-8 space-y-10 h-48 w-screen flex-col xl:h-auto xl:w-24 bg-white rounded-lg">
+            <div class="flex justify-center">
               <svg id="Layer_1" class="w-8 h-8 fill-current text-blue-500" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><path d="m304.2 190.666h72.3c42.833 0 111.4 1.972 111.4-63.2 0-56.859-71.055-127.466-175.667-127.466h-8.033c-50.122 0-97.631 16.978-135.976 48.2h-16.674c-70.388 0-127.45 56.947-127.45 127.466 0 8.284 6.716 15 15 15h50.722c-.957 8.294-1.456 16.692-1.456 25.167 0 119.222 96.466 215.833 215.833 215.833h1.815l75.946 75.946c5.846 5.846 15.362 5.859 21.228-.015 15.703-15.706 24.35-36.584 24.35-58.792 0-17.521-5.384-34.216-15.371-48.199 9.987-13.98 15.371-30.677 15.371-48.201 0-22.21-8.65-43.091-24.364-58.806-5.858-5.859-15.356-5.858-21.213 0l-75.934 75.934h-1.827c-49.378 0-89.434-39.961-89.434-89.433.001-49.377 39.962-89.434 89.434-89.434zm23.033-160.092c83.486 6.424 130.667 62.563 130.667 96.893 0 28.401-20.324 33.2-81.4 33.2h-49.267zm0 360.178 63.827-63.826c4.23 7.724 6.478 16.429 6.478 25.479 0 14.197-5.529 27.545-15.569 37.585-.107.107-.221.224-.324.334-5.557 5.903-5.409 15.162.324 20.895 10.041 10.041 15.57 23.389 15.57 37.585 0 9.051-2.247 17.756-6.478 25.48l-63.827-63.827v-19.705zm-271.995-230.086c4.276-27.873 27.514-73.343 81.802-81.399-19.714 24.04-33.79 51.718-41.581 81.399zm129.529 119.434c0 63.796 49.863 115.659 112.467 119.234v2.203c-99.253-3.677-178.867-85.568-178.867-185.704s79.613-182.028 178.867-185.705v130.736c-62.688 3.582-112.467 55.519-112.467 119.236zm206.733-184.767c0-8.28-6.72-15-15-15s-15 6.72-15 15 6.72 15 15 15 15-6.72 15-15z" /></g></svg>
             </div>
             <hr class="m-5"></hr>
-            <div class="flex flex-row space-x-10 justify-center xl:flex-col xl:space-y-10 xl:space-x-0">
+            <div class="flex flex-row justify-center space-x-10 xl:flex-col xl:space-y-10 xl:space-x-0">
 
               {/* 홈 메뉴 1*/}
               <div class="flex justify-center cursor-pointer text-gray-300 hover:text-blue-500 duration-300 ease-in-out" onClick={this.pressMenuButton} id="1" >
@@ -131,7 +131,7 @@ class Main extends Component {
           </div>
           {/* 콘텐트 박스 */}
           <div class="w-full h-full xl:h-auto xl:overflow-auto">
-            <div class="hidescroll bg-gray-100 bottom-0 right-0 p-8 w-full h-full rounded-t-lg xl:rounded-l-3xl xl:p-16">
+            <div class="hidescroll bg-gray-100 bottom-0 right-0 p-8 rounded-t-lg xl:rounded-l-3xl xl:p-16">
               {/* 콘텐츠 내용 */}
               {content}
             </div>

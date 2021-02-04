@@ -43,16 +43,15 @@ class WordsTest extends Component {
     }
     loadingCompoment(ThisViewId, callback) {
         setTimeout(() => {
+          if (this.props.viewId === ThisViewId) { // 사용자가 뷰를 이동하지않고 계속 기다릴경우
             if (this.props.api_fetching === false) { // API 질의가 진행중이 아닐경우
-                //console.log(`${this.props.viewId} ${ThisViewId}`)
-                if (this.props.viewId === ThisViewId) { // 사용자가 뷰를 이동하지 않고 유지 했을 경우
-                    this.setState({ viewid: 1 }); // 내부 뷰 상태를 설정합니다 1: 시험시작전 안내
-                }
-            } else {
-                callback();
+              this.setState({ viewid: 1 }); // 내부 뷰 상태를 설정합니다 1: 시험시작전 안내
+            }else{ //api 모듈이 계속 질의 상태일경우
+              callback(10, this.loadingCompoment.bind(this)); //더 기다립니다..
             }
-        }, 2000);
-    }
+          } //기다리지 않고 뷰를 이탈했을 경우 그냥 종료합니다
+        }, 1000);
+      }
     componentDidMount() {
         // 지정된 시간 이후에 content state.api 가 계속 질의 중인지 확인합니다
         // 작업을 다 끝낸 상태면 화면으로 리 랜더링 하게됩니다 작업중일경우 callback으로 다시 로딩함수를 호출합니다

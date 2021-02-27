@@ -42,7 +42,7 @@ class Content extends Component {
         // `error.request`는 브라우저의 XMLHttpRequest 인스턴스 또는
         // Node.js의 http.ClientRequest 인스턴스입니다.
         //console.log(error.request);
-        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline" });// 질의 진행 상태설정
+        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline_점검중입니다" });// 질의 진행 상태설정
       }
       else {
         // 오류를 발생시킨 요청을 설정하는 중에 문제가 발생했습니다.
@@ -86,7 +86,7 @@ class Content extends Component {
         // `error.request`는 브라우저의 XMLHttpRequest 인스턴스 또는
         // Node.js의 http.ClientRequest 인스턴스입니다.
         //console.log(error.request);
-        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline" });// 질의 진행 상태설정
+        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline_점검중입니다" });// 질의 진행 상태설정
       }
       else {
         // 오류를 발생시킨 요청을 설정하는 중에 문제가 발생했습니다.
@@ -127,7 +127,7 @@ class Content extends Component {
         // `error.request`는 브라우저의 XMLHttpRequest 인스턴스 또는
         // Node.js의 http.ClientRequest 인스턴스입니다.
         //console.log(error.request);
-        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline" });// 질의 진행 상태설정
+        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline_점검중입니다" });// 질의 진행 상태설정
       }
       else {
         // 오류를 발생시킨 요청을 설정하는 중에 문제가 발생했습니다.
@@ -165,7 +165,7 @@ class Content extends Component {
         // `error.request`는 브라우저의 XMLHttpRequest 인스턴스 또는
         // Node.js의 http.ClientRequest 인스턴스입니다.
         //console.log(error.request);
-        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline" });// 질의 진행 상태설정
+        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline_점검중입니다" });// 질의 진행 상태설정
       }
       else {
         // 오류를 발생시킨 요청을 설정하는 중에 문제가 발생했습니다.
@@ -203,7 +203,7 @@ class Content extends Component {
         // `error.request`는 브라우저의 XMLHttpRequest 인스턴스 또는
         // Node.js의 http.ClientRequest 인스턴스입니다.
         //console.log(error.request);
-        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline" });// 질의 진행 상태설정
+        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline_점검중입니다" });// 질의 진행 상태설정
       }
       else {
         // 오류를 발생시킨 요청을 설정하는 중에 문제가 발생했습니다.
@@ -241,7 +241,7 @@ class Content extends Component {
         // `error.request`는 브라우저의 XMLHttpRequest 인스턴스 또는
         // Node.js의 http.ClientRequest 인스턴스입니다.
         //console.log(error.request);
-        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline" });// 질의 진행 상태설정
+        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline_점검중입니다" });// 질의 진행 상태설정
       }
       else {
         // 오류를 발생시킨 요청을 설정하는 중에 문제가 발생했습니다.
@@ -280,7 +280,7 @@ class Content extends Component {
         // `error.request`는 브라우저의 XMLHttpRequest 인스턴스 또는
         // Node.js의 http.ClientRequest 인스턴스입니다.
         //console.log(error.request);
-        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline" });// 질의 진행 상태설정
+        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline_점검중입니다" });// 질의 진행 상태설정
       }
       else {
         // 오류를 발생시킨 요청을 설정하는 중에 문제가 발생했습니다.
@@ -318,7 +318,7 @@ class Content extends Component {
         // `error.request`는 브라우저의 XMLHttpRequest 인스턴스 또는
         // Node.js의 http.ClientRequest 인스턴스입니다.
         //console.log(error.request);
-        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline" });// 질의 진행 상태설정
+        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline_점검중입니다" });// 질의 진행 상태설정
       }
       else {
         // 오류를 발생시킨 요청을 설정하는 중에 문제가 발생했습니다.
@@ -357,7 +357,7 @@ class Content extends Component {
         // `error.request`는 브라우저의 XMLHttpRequest 인스턴스 또는
         // Node.js의 http.ClientRequest 인스턴스입니다.
         //console.log(error.request);
-        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline" });// 질의 진행 상태설정
+        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline_점검중입니다" });// 질의 진행 상태설정
       }
       else {
         // 오류를 발생시킨 요청을 설정하는 중에 문제가 발생했습니다.
@@ -395,7 +395,7 @@ class Content extends Component {
         // `error.request`는 브라우저의 XMLHttpRequest 인스턴스 또는
         // Node.js의 http.ClientRequest 인스턴스입니다.
         //console.log(error.request);
-        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline" });// 질의 진행 상태설정
+        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline_점검중입니다" });// 질의 진행 상태설정
       }
       else {
         // 오류를 발생시킨 요청을 설정하는 중에 문제가 발생했습니다.
@@ -431,7 +431,7 @@ class Content extends Component {
         // `error.request`는 브라우저의 XMLHttpRequest 인스턴스 또는
         // Node.js의 http.ClientRequest 인스턴스입니다.
         //console.log(error.request);
-        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline" });// 질의 진행 상태설정
+        this.setState({ api_fetching: false, error: true, error_msg: "api_server_offline_점검중입니다" });// 질의 진행 상태설정
       }
       else {
         // 오류를 발생시킨 요청을 설정하는 중에 문제가 발생했습니다.

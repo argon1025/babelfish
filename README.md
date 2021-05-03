@@ -5,8 +5,8 @@
 ![image](https://user-images.githubusercontent.com/55491354/116848324-508c3500-ac27-11eb-9011-5c9d6eda2a85.png)
 
 # Project Stack
-React (CRA)
-Tailwind CSS
+- React (CRA)
+- Tailwind CSS
 
 # Issues
 [Here](https://github.com/argon1025/babelfish/issues)

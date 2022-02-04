@@ -4,7 +4,7 @@
 
 Word book platform for everyone, Babelfish.
 
-Service link is [Here](http://babelfish.seongrok.net/)
+> Service link is [Here](http://babelfish.seongrok.net/) but service has been terminated ⚒️
 
 Service Endpoint Document is [Here](https://github.com/argon1025/Babelfish_API/tree/main/app)
 
